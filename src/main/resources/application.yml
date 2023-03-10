@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: ms-orders
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+      config:
+        enabled: true
+
+  config:
+    import: 'optional:consul:'

@@ -1,0 +1,21 @@
+{
+  "node_name": "consul-server02",
+  "server": true,
+  "ui_config": {
+    "enabled": false
+  },
+  "retry_join": [
+    "consul-server01",
+    "consul-server03"
+  ],
+  "datacenter": "dc1",
+  "data_dir": "/consul/data",
+  "log_level": "INFO",
+  "addresses": {
+    "http": "0.0.0.0"
+  },
+  "connect": {
+    "enabled": true
+  },
+  "encrypt": "kqfSds638Ac1PJ/ivrgNRkPQbep+Nvxfk01BpCm41kU="
+}
